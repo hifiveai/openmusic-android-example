@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/pagerTab"
+        style="@style/font_size_30"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:visibility="visible"
+        app:tabBackground="@null"
+        app:tabGravity="center"
+        app:tabIndicatorColor="#FE6646"
+        app:tabIndicatorHeight="0dp"
+        app:tabMinWidth="20dp"
+        app:tabPaddingEnd="10dp"
+        app:tabPaddingStart="10dp"
+        app:tabSelectedTextColor="@android:color/black"
+        app:tabTextAppearance="@style/CKCustomTextAppearance"
+        app:tabTextColor="#808080" />
+
+    <ImageView
+        android:id="@+id/backIv"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignTop="@id/pagerTab"
+        android:layout_alignBottom="@id/pagerTab"
+        android:layout_marginStart="30dp"
+        android:src="@drawable/ic_page_close" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/materialViewPager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pagerTab"
+        android:layout_gravity="center"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp" />
+
+</RelativeLayout>

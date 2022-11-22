@@ -1,0 +1,13 @@
+{
+  "code":0,
+  "data":{
+    "collections":[
+      {
+        "id":"1001",
+        "name":"热门",
+        "name_en":"Hot"
+      }
+    ]
+  },
+  "message":"success"
+}

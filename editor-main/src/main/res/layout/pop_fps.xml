@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:background="@drawable/bg_resolution"
+    android:gravity="center_vertical"
+    android:layout_marginTop="10dp"
+    android:orientation="horizontal">
+
+
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/tv_fps_25"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="25FPS"
+        android:gravity="center"
+        android:textColor="@android:color/white" />
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/tv_fps_30"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="30FPS"
+        android:gravity="center"
+        android:textColor="@android:color/white" />
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/tv_fps_50"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="50FPS"
+        android:gravity="center"
+        android:textColor="@android:color/white" />
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/tv_fps_60"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="60FPS"
+        android:gravity="center"
+        android:textColor="@android:color/white" />
+
+
+</LinearLayout>

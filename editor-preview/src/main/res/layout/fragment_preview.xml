@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/black"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/surface_preview_fr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.ss.ugc.android.editor.preview.subvideo.VideoGestureLayout
+        android:id="@+id/gesture_layout_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvRotate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="44dp"
+            android:textColor="@color/transparent_80p_white"
+            android:textSize="16dp"
+            android:visibility="gone" />
+
+        <com.ss.ugc.android.editor.preview.infosticker.InfoStickerGestureView
+            android:id="@+id/infoStickerEditorView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+            <include layout="@layout/stub_sticker_view" />
+
+            <ImageView
+                android:id="@+id/ivEditTail"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/bg_edit_tail"
+                android:textColor="@color/transparent"
+                android:textSize="14dp"
+                android:visibility="gone" />
+
+        </com.ss.ugc.android.editor.preview.infosticker.InfoStickerGestureView>
+    </com.ss.ugc.android.editor.preview.subvideo.VideoGestureLayout>
+</FrameLayout>

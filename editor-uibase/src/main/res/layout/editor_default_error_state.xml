@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/bg_fragment"
+    android:paddingLeft="32dp"
+    android:paddingRight="32dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:textSize="17sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/std_text_primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        tools:text="The message list is empty" />
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:textSize="14sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:textColor="@color/std_text_tertiary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="you can see it" />
+
+    <TextView
+        android:id="@+id/tv_button"
+        android:layout_width="231dp"
+        android:layout_height="44dp"
+        android:textSize="15dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:background="@drawable/editor_default_state_view_button_border"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desc"
+        app:layout_constraintVertical_bias="0.2"
+        android:textColor="@color/std_text_primary"
+        tools:text="click me" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

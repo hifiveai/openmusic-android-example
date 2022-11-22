@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="time_init">00:00</string>
+    <string name="cur_total_time_init">00:00/00:00</string>
+
+    <!-- 以下只有使用剪映导出页才有 -->
+    <string name="video_exporting">视频导出中...</string>
+    <string name="share_video">分享</string>
+    <string name="done_compiling">完成</string>
+    <string name="compile_warning">请保持屏幕点亮，不要锁屏或切换程序</string>
+    <string name="export_saved">已保存至系统相册</string>
+    <!-- 以上只有使用剪映导出页才有 -->
+    <string name="ensure_export_template">确认导出吗？</string>
+    <string name="ensure_export_template_content">检测到还未进行模版替换素材和文字\n的配置，若不配置将默认模版中的所\n有素材和文字均可替换哦～</string>
+
+    <string name="ensure_exit_template_setting">退出模版设置吗?</string>
+    <string name="ensure_exit_template_setting_content">确定在未保存的情况下退出「模版设置」吗?</string>
+    <string name="exit_template_setting_icon">返回</string>
+    <string name="save_template_setting_icon">确定</string>
+
+    <string name="template_info_title">编辑模版信息</string>
+    <string name="template_info_reset">重置</string>
+    <string name="template_info_reset_title">重置模版信息</string>
+    <string name="template_info_reset_body">重置后，所有信息将无法复原</string>
+    <string name="template_info_exit_notice_title">退出编辑</string>
+    <string name="template_info_exit_notice_body">退出则不保存新增内容</string>
+    <string name="template_info_set_cover">设置封面</string>
+    <string name="template_info_export_button">上传模版</string>
+    <string name="template_info_input_name">请输入模版名称(必填)...</string>
+    <string name="template_info_input_desc">请输入模版描述(选填)...</string>
+    <string name="template_info_input_keyword">输入关键词,请手动输入#(选填,最多支持20个关键词～)</string>
+    <string name="template_info_more_config">更多设置</string>
+    <string name="template_name_max_count">0/20</string>
+    <string name="template_desc_max_count">0/55</string>
+    <string name="keep_audio_title">保留原声</string>
+    <string name="keep_audio_desc">导入模板的视频将保留原声</string>
+    <string name="align_mode_title">适配剪裁</string>
+    <string name="align_mode_desc">素材比例与模板不一致时进行适当裁剪</string>
+    <string name="export_notice">锁屏或者切换程序会终止模板导出哦</string>
+    <string name="label_create_new_template">制作新模板</string>
+    <string name="new_template_text">制作新模板</string>
+    <string name="template_upload_done">已上传到云端</string>
+    <string name="template_upload_failed">上传模版失败</string>
+    <string name="redo_export_text">重新上传</string>
+    <string name="save_draft_text">保存草稿并退出</string>
+    <string name="export_failed">上传失败</string>
+    <string name="maximum_name_notice">最多输入20个字符</string>
+    <string name="maximum_desc_notice">最多输入55个字</string>
+
+    <string name="draft_fragment">草稿箱</string>
+    <string name="manage_template_draft_text">管理</string>
+    <string name="delete_draft_title_shortened">删除</string>
+    <string name="copy_draft_title">复制草稿</string>
+    <string name="rename_draft_title">重命名</string>
+    <string name="rename_draft_toast_header">修改草稿名字</string>
+    <string name="done_button">确定</string>
+    <string name="cancel_button">取消</string>
+    <string name="save_button">保存</string>
+    <string name="quit_button">直接退出</string>
+    <string name="delete_draft_title">删除草稿</string>
+
+    <string name="draft_resource_gone_tv">"草稿素材不存在，视频已被删除"</string>
+    <string name="template_info_key_word_hint">输入#后空格形成关键词...</string>
+    <string name="template_info_key_word">#关键词</string>
+    <string name="ck_exit_directly">直接退出</string>
+    <string name="ck_title_save_draft">保存草稿</string>
+    <string name="label_my_template">我的模板</string>
+    <string name="empty_draft_name_error">名字不能为空</string>
+
+    <string name="ck_redo_toast_prompt">Redo %1$s successfully</string>
+    <string name="ck_undo_toast_prompt">Undo %1$s successfully</string>
+</resources>

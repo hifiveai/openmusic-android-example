@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ss.ugc.android.editor.preview.infosticker.SelectFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/select_frame_layout"
+    android:layout_width="110dp"
+    android:layout_height="110dp"
+    android:visibility="invisible">
+
+    <ImageButton
+        android:id="@+id/copy"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_gravity="bottom|start"
+        android:scaleType="centerInside"
+        android:background="@android:color/transparent"
+        android:src="@drawable/text_ic_copy" />
+
+    <ImageButton
+        android:id="@+id/flip"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_gravity="bottom|start"
+        android:scaleType="centerInside"
+        android:background="@android:color/transparent"
+        android:src="@drawable/bg_flip_bubble_hori" />
+
+    <ImageButton
+        android:id="@+id/delete"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:scaleType="centerInside"
+        android:background="@android:color/transparent"
+        android:src="@drawable/text_ic_close" />
+
+
+    <ImageButton
+        android:id="@+id/edit"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_gravity="top|end"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:src="@drawable/text_ic_edit" />
+
+    <com.ss.ugc.android.editor.preview.infosticker.ScaleButton
+        android:id="@+id/scale"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_gravity="end|bottom"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:src="@drawable/text_ic_rorate" />
+
+</com.ss.ugc.android.editor.preview.infosticker.SelectFrameLayout>

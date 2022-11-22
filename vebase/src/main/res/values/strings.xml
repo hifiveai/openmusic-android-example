@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<resources>
+    <string name="vesdk_copy_license_sucess">license文件未复制成功</string>
+</resources>

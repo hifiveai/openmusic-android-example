@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="transparent">@android:color/transparent</color>
+    <color name="colorChecked">#33cccc</color>
+    <color name="colorUnChecked">#aaaaaa</color>
+    <color name="setting_color">#AAAAAA</color>
+    <color name="tipboard_bg">#80000000</color>
+    <color name="featureboard_bg">#ffffff</color>
+    <color name="selected_color">#1E90FF</color>
+    <color name="track_selected_color">#87CEFA</color>
+
+    <color name="focus_bg_colcor">#AAAAAA</color>
+
+    <color name="grid_focused">#3F78B5</color>
+    <color name="grid_selected">#303F9F</color>
+    <color name="viewfinder_laser">#ffcc0000</color> <!-- Android standard ICS color -->
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="result_view">#b0000000</color>
+    <color name="possible_result_points">#c0ffbd21</color> <!-- Android standard ICS color -->
+
+    <color name="ck_colorBg">#99000000</color>
+    <color name="black_home">#181718</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="white_50">#7FFFFFFF</color>
+    <color name="colorGrey">#9C9C9C</color>
+    <color name="advanced_black">#4D4C4D</color>
+    <color name="transparent_white">#66FFFFFF</color>
+    <color name="black_60">#99000000</color>
+    <color name="tab_red">#E36E55</color>
+    <color name="transparent_white_hence">#AAFFFFFF</color>
+    <color name="std_text_tertiary">#80FFFFFF</color>
+    <color name="std_text_primary">#E6FFFFFF</color>
+    <color name="std_text_reverse">#161823</color>
+
+    <color name="std_text_reverse_2">#BF161823</color>
+    <color name="std_const_bg_container_2">#14FFFFFF</color>
+
+    <color name="black_all">#000000</color>
+
+    <color name="tv_bottom_color">#FE6646</color>
+    <color name="bg_fragment">#181718</color>
+    <color name="bg_no_filter">#303336</color>
+    <color name="bg_filter_selected">#55000000</color>
+    <color name="bg_panel_black">#F2000000</color>
+
+    <color name="colorEditorTimeTrackBackground">#303030</color>
+    <color name="draft_save_cancel">#F4F4F4</color>
+
+    <color name="bg_editor_toast">#CC181718</color>
+    <color name="border_editor_toast">#C239AF</color>
+    <!--90%透明度-->
+    <!--85%透明度-->
+    <!--80%透明度-->
+    <!--75%透明度-->
+    <!--70%透明度-->
+    <!--65%透明度-->
+    <!--60%透明度-->
+    <!--50%透明度-->
+    <!--50%透明度-->
+    <color name="transparent_45p">#72000000</color><!--45%透明度-->
+    <!--40%透明度-->
+    <color name="transparent_30p">#4D000000</color><!--30%透明度-->
+    <!--20%透明度-->
+    <!--15%透明度-->
+    <!--10%透明度-->
+    <!--10%透明度-->
+    <color name="black">#FF000000</color>
+
+
+
+    <color name="tips_bg_color1">#66101010</color>
+    <color name="music_bg_color">#101010</color>
+
+    <color name="transparent_5p_white">#05FFFFFF</color><!-- 5%透明度 -->
+    <!--90%透明度-->
+    <!--85%透明度-->
+    <color name="transparent_80p_white">#CCFFFFFF</color><!--80%透明度-->
+    <!--70%透明度-->
+    <!--65%透明度-->
+    <!--60%透明度-->
+    <!--50%透明度-->
+    <color name="transparent_50p_white">#80FFFFFF</color><!--80%透明度-->
+
+    <!--40%透明度-->
+    <!--30%透明度-->
+    <!--30%透明度-->
+    <!-- 24%透明度 -->
+    <color name="transparent_20p_white">#33FFFFFF</color><!--20%透明度-->
+    <!--15%透明度-->
+    <!--10%透明度-->
+    <!--4%透明度-->
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="scroller_bg">#101010</color>
+
+
+    <color name="beat_color">#F2BE60</color>
+    <color name="style_theme">#FE6646</color>
+    <color name="itemNormalBg">#FFFFFF</color>
+    <color name="place_holder">#262626</color>
+    <color name="template_theme">#C239AF</color>
+
+    <color name="write">#FFFFFF</color>
+    <color name="transparent_60p">#99000000</color><!--60%透明度-->
+    <color name="transparent_80p">#CC000000</color><!--80%透明度-->
+    <color name="transparent_30p_white">#4DFFFFFF</color><!--30%透明度-->
+    <color name="style_recode_audio">#FE6646</color>
+    <color name="common_text_color">#7FFFFFFF</color><!--30%透明度-->
+    <color name="mutex_seek_bar_default_line">#CC626262</color>
+
+    <color name="seek_bar_line">#FE6646</color>
+
+    <color name="editor_dialog_bg">#F2F2F2</color>
+    <color name="editor_dialog_confirm">#FE6646</color>
+
+    <color name="fuchsia_pink">#C239AF</color>
+    <color name="baby_blue">#67B8ED</color>
+</resources>

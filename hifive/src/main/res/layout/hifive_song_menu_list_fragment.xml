@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#16181A">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp">
+
+        <ImageView
+            android:id="@+id/hiFiveSongMenuListBackIv"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:contentDescription="@null"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/icon_hifive_back" />
+        <TextView
+            android:id="@+id/hiFiveSongMenuTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="添加音乐"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="如果情绪有天气 我陷在阴天里"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="68dp"
+        android:visibility="gone"
+        android:textSize="28sp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#29FFFFFF"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"/>
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/hiFiveSongMenuListRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.scwang.smart.refresh.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/hiFiveSongMenuListRv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <com.scwang.smart.refresh.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+</LinearLayout>

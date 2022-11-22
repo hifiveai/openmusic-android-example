@@ -1,0 +1,45 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation project(':editor-uibase')
+    implementation rootProject.ext.support["appcompat"]
+    implementation rootProject.ext.support["design"]
+    api rootProject.ext.dependencies["glide"]
+
+    //implementation 'androidx.appcompat:appcompat:1.0.0'                 //必须 1.0.0 以上
+    implementation  'io.github.scwang90:refresh-layout-kernel:2.0.5'      //核心必须依赖
+    implementation  'io.github.scwang90:refresh-header-classics:2.0.5'    //经典刷新头
+    //implementation  'io.github.scwang90:refresh-header-material:2.0.5'    //谷歌刷新头
+    implementation  'io.github.scwang90:refresh-footer-classics:2.0.5'    //经典加载
+    //implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0'
+    implementation files('libs/hifivesdk-4.2.0.1.aar')
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.10'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
+    api 'com.squareup.okhttp3:okhttp:4.9.0'
+    api 'com.squareup.okhttp3:logging-interceptor:4.9.0'
+}

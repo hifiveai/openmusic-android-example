@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true">
+
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <EditText
+        android:id="@+id/input_text"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_text_sticker_input"
+        android:hint="@string/ck_enter_text"
+        android:padding="8dp"
+        android:textColor="@drawable/selector_edit_text_color"
+        android:textColorHint="@color/colorWhite"
+        android:textSize="12sp"
+        android:inputType="textMultiLine"
+        android:textCursorDrawable="@drawable/bg_cursor"
+        app:layout_constraintLeft_toLeftOf="@id/bg"
+        app:layout_constraintRight_toRightOf="@id/bg"
+        app:layout_constraintTop_toTopOf="@id/bg"
+        tools:text="@string/ck_enter_text" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_text"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="46dp"
+        android:background="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/input_text"
+        app:tabBackground="@drawable/bg_item_unselect_selector"
+        app:tabIndicatorColor="@color/tv_bottom_color"
+        app:tabMinWidth="54dp"
+        app:tabMode="scrollable"
+        app:tabSelectedTextColor="@color/colorWhite"
+        app:tabTextAppearance="@style/MyTabLayoutTextAppearance"
+        app:tabTextColor="@color/colorGrey" />
+
+    <ImageView
+        android:id="@+id/confirm"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="3dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_ok"
+        app:layout_constraintBottom_toBottomOf="@+id/tab_text"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="292dp"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:background="#181718"
+        app:layout_constraintTop_toBottomOf="@id/tab_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,34 @@
+buildscript {
+    apply from:'./versions.gradle'
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$versions.gradleVersion"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        maven { url 'https://jitpack.io' }
+        flatDir {
+            dirs project(':vebase').file('libs')
+        }
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+task copyTask(type: Copy) {
+    from './app/build/outputs/apk/debug/app-debug.apk'
+    into './'
+    include('app-debug.apk')
+    rename('app-debug.apk', 'vedemo.apk')
+}

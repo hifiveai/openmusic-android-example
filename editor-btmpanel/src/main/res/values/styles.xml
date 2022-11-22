@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="netease_music_time_seek_bar_style" parent="Widget.AppCompat.SeekBar">
+        <!--设置播放进度条的style-->
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:thumb">@drawable/ic_seekbar_thumb</item>
+    </style>
+
+    <style name="MyTabLayoutTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">14dp</item>
+        <item name="singleLine">true</item>
+    </style>
+</resources>

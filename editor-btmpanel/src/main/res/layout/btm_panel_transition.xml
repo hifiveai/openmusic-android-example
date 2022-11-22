@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:visibility="invisible"
+        android:clickable="true"
+        android:background="@color/bg_fragment"
+        android:id="@+id/rl_progress"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <TextView
+            android:id="@+id/tv"
+            android:text="@string/ck_transition_duration"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:textSize="12sp"
+            android:layout_toRightOf="@+id/tv"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/tv_min"
+            android:text="0.1s"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:textSize="12sp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:id="@+id/tv_max"
+            android:text="5.0s"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <com.ss.ugc.android.editor.base.view.ProgressBar
+            android:layout_toRightOf="@+id/tv_min"
+            android:layout_toLeftOf="@+id/tv_max"
+            android:id="@+id/pb_transition"
+            app:textHeight="20dp"
+            app:textSize="10sp"
+            app:circleRadius="5dp"
+            app:inactiveLineColor="#535353"
+            app:activeLineColor="@color/tv_bottom_color"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:paddingTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <com.ss.ugc.android.editor.base.resourceview.ResourceListView
+        android:id="@+id/rc_transition"
+        android:background="@color/bg_fragment"
+        android:layout_gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

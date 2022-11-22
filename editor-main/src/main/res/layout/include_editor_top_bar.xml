@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/top_function"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/bg_fragment"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="4dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_close"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="4dp"
+        android:scaleType="centerInside"
+        android:id="@+id/close_template_setting_iv"
+        android:src="@drawable/back_template"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/btn_save_cover"
+        android:layout_width="60dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/bt_complete_selector"
+        android:text="@string/ck_save_cover"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/bt_complete"
+        android:layout_width="60dp"
+        android:layout_height="26dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/bt_complete_selector"
+        android:text="@string/ck_export"
+        android:textSize="12sp"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/save_template_btn"
+        android:layout_width="56dp"
+        android:layout_height="28dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/bt_complete_selector"
+        android:text="保存"
+        android:visibility="gone"
+        android:textSize="12sp"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/reset_cover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/close"
+        app:layout_constraintRight_toLeftOf="@id/btn_save_cover"
+        app:layout_constraintTop_toTopOf="@+id/close"
+        android:layout_marginEnd="19dp"
+        android:text="@string/ck_reset"
+        android:textColor="@color/white"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/enable_template_setting_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="模版设置"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        tools:visibility="visible"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintStart_toEndOf="@+id/resolution_layout"
+        app:layout_constraintEnd_toStartOf="@+id/bt_complete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/resolution_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:gravity="center"
+        android:layout_width="76dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/resolution"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:text="1080P" />
+
+        <ImageView
+            android:id="@+id/enable_resolution"
+            android:layout_width="7dp"
+            android:layout_height="4dp"
+            android:layout_margin="4dp"
+            android:layout_gravity="center"
+            android:src="@drawable/enable_resolution" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tempate_setting_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="模版设置"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/resolution2"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:gravity="center"-->
+    <!--            android:text="1080P"-->
+    <!--            android:textColor="@color/colorWhite"-->
+    <!--            android:textSize="12sp"-->
+    <!--            android:textStyle="bold"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintBottom_toBottomOf="@id/close"-->
+    <!--            app:layout_constraintTop_toTopOf="@+id/close"-->
+    <!--            tools:text="720P" />-->
+    <!--        <ImageView-->
+    <!--            android:id="@+id/enable_resolution"-->
+    <!--            android:layout_width="7dp"-->
+    <!--            android:layout_height="4dp"-->
+    <!--            android:layout_margin="4dp"-->
+    <!--            android:src="@drawable/enable_resolution"-->
+    <!--            app:layout_constraintLeft_toRightOf="@id/resolution"-->
+    <!--            app:layout_constraintTop_toTopOf="parent"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--            />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

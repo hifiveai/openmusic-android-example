@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ck_redo_toast_prompt">Redo %1$s successfully</string>
+    <string name="ck_undo_toast_prompt">Undo %1$s successfully</string>
+</resources>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_progress"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/ck_colorBg">
+
+        <com.vesdk.vebase.view.ProgressBar
+            android:id="@+id/pb_effect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="60dp"
+            android:paddingTop="25dp"
+            android:paddingEnd="60dp"
+            app:activeLineColor="@color/tv_bottom_color"
+            app:circleRadius="6.5dp"
+            app:circleColor="#000000"
+            app:circleStrokeColor="@color/white"
+            app:circleStrokeWidth="1.5dp"
+            app:inactiveLineColor="@color/white"
+            app:textColor="@color/white"
+            app:textHeight="20dp"
+            app:textSize="10sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_to_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:paddingRight="25dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_duibi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_duibi" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <include
+        layout="@layout/recorder_fragment_identify"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

@@ -1,0 +1,57 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@android:color/background_dark</item>
+    </style>
+
+    <style name="TransBottomSheetDialogStyle" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+
+    <style name="ReverseLoadingDialogTheme" parent="AlertDialog.AppCompat.Light">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <declare-styleable name="CircleSeekBar">
+        <attr name="lineColor" format="color" />
+        <attr name="lineHintColor" format="color" />
+        <attr name="handleStrokeColor" format="color" />
+        <attr name="drawDefaultPoint" format="boolean" />
+        <attr name="handleColor" format="color" />
+        <attr name="handle_stroke_width" format="dimension" />
+        <attr name="handle_radius" format="dimension" />
+        <attr name="lineWidth" format="dimension" />
+        <attr name="progressLineWidth" format="dimension" />
+        <attr name="fillWidth" format="boolean" />
+        <attr name="needHandle" format="boolean" />
+        <attr name="floatingBottom" format="boolean" />
+        <attr name="shadowColor" format="color" />
+    </declare-styleable>
+
+    <style name="font_size_30">
+        <item name="android:textSize">15sp</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+    </style>
+
+    <style name="CKCustomTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="EditTextUnderscoreTheme" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/black_home</item>
+        <item name="colorControlActivated">@color/black_home</item>
+    </style>
+
+</resources>

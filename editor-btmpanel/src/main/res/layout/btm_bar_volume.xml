@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:background="@color/bg_fragment"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/iv_back"
+            android:src="@drawable/ic_function_back_double"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginRight="20dp"
+            android:id="@+id/ll_delete"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_volume_delete"
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
+
+            <TextView
+                android:layout_marginTop="2dp"
+                android:layout_centerVertical="true"
+                android:text="@string/ck_delete"
+                android:textColor="@color/colorWhite"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:id="@+id/ll_set"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/ll_delete"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_volume_set"
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
+
+            <TextView
+                android:layout_marginTop="2dp"
+                android:layout_centerVertical="true"
+                android:text="@string/ck_volume"
+                android:textColor="@color/colorWhite"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ViewStub
+        android:id="@+id/vs_text_sticker_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/text_sticker_text" />
+
+    <ViewStub
+        android:id="@+id/vs_text_sticker_outline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/text_sticker_outline" />
+
+    <ViewStub
+        android:id="@+id/vs_text_sticker_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/text_sticker_background" />
+
+    <ViewStub
+        android:id="@+id/vs_text_sticker_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/text_sticker_shadow" />
+
+    <ViewStub
+        android:id="@+id/vs_text_sticker_align"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/text_sticker_align" />
+
+    <ViewStub
+        android:id="@+id/vs_text_sticker_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/text_sticker_style" />
+
+</LinearLayout>

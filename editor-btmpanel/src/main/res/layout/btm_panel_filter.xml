@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_fragment"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll_filter_progress_parent"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/ck_opacity"
+            android:layout_marginStart="20dp"
+            android:paddingStart="20dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp"
+            />
+        <com.ss.ugc.android.editor.base.view.ProgressBar
+            android:id="@+id/pb_filter"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:paddingStart="20dp"
+            android:paddingTop="25dp"
+            android:paddingEnd="60dp"
+            app:activeLineColor="@color/tv_bottom_color"
+            app:circleRadius="5dp"
+            app:inactiveLineColor="#535353"
+            app:textHeight="20dp"
+            app:textSize="10sp" />
+    </LinearLayout>
+
+    <com.ss.ugc.android.editor.base.resourceview.ResourceListView
+        android:id="@+id/filter_resource_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_above="@+id/rl_show_filter"
+        android:layout_gravity="center_vertical"
+        android:background="@color/bg_fragment" />
+
+
+</LinearLayout>

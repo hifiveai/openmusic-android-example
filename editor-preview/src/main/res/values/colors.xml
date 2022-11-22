@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="style_theme">#FE6646</color>
+    <color name="blackThree">#101010</color>
+    <color name="transparent_85p_white">#D9FFFFFF</color><!--85%透明度-->
+    <color name="transparent_60p_white">#99FFFFFF</color><!--60%透明度-->
+    <color name="transparent_15p_white">#26FFFFFF</color><!--15%透明度-->
+    <color name="filter_seekbar_line">#fe2c55</color>
+</resources>

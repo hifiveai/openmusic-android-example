@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:orientation="horizontal">
+
+    <!-- clickable="true" 为了防止弹出fragment后点 到下面一层的按钮 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bg_fragment"
+        android:clickable="true"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_function_back_single" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rc_fuc_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@+id/iv_back" />
+
+    </RelativeLayout>
+</RelativeLayout>

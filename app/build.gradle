@@ -1,0 +1,99 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+// keystore.properties file, in the rootProject folder.
+def keystorePropertiesFile = rootProject.file("./keystore.properties")
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+def releaseTime() {
+    return new Date().format("yyyyMMdd_HHmm")
+}
+
+println("--------Module app: storeFile Path:${keystoreProperties['storeFile']}")
+
+android {
+    signingConfigs {
+        release {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+        }
+    }
+
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        //applicationId "com.bytedance.solution.ck"
+        applicationId "com.hfopen.videosdk"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 20605
+        versionName "2.6.5"
+        ndk {
+            abiFilters "armeabi-v7a" // "arm64-v8a" // 源码依赖 NLE 的时候，需要跟NLE对齐
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            //签名
+            signingConfig signingConfigs.release
+        }
+    }
+
+    applicationVariants.all { variant ->
+        // 更新至Android Studio 3.3 gradle 4.10.1
+        variant.outputs.all {
+            if (variant.buildType.name.equals('release')) {//如果是release包
+                outputFileName = "CK_Android_${variant.versionName}_${releaseTime()}_release.apk"
+            } else if (variant.buildType.name.equals('debug')) {//如果是debug包
+                outputFileName = "CK_Android_${variant.versionName}_${releaseTime()}_debug.apk"
+            }
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    packagingOptions {
+        pickFirst 'lib/arm64-v8a/libc++_shared.so'
+        pickFirst 'lib/armeabi-v7a/libc++_shared.so'
+    }
+
+    packagingOptions {
+        exclude 'META-INF/*.kotlin_module'
+        pickFirst 'lib/*/libttffmpeg.so'
+    }
+    repositories {
+        flatDir {
+            dirs 'libs', '../vebase/libs', '../library-res/libs'
+        }
+    }
+}
+if (ENABLE_TOB == "true") {
+    configurations {
+        compile.exclude group: 'com.bytedance.ugc.framework.libs', module: 'vesdk'
+    }
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation rootProject.ext.dependencies["activityoncrash"]
+    implementation(rootProject.ext.support["appcompat"]) {
+        force = true
+    }
+    api project(':ck-entrance')
+}

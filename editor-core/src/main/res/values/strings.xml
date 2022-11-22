@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ck_keyframe">关键帧</string>
+    <string name="ck_tips_only_support_video">只支持视频</string>
+    <string name="ck_tips_current_position_split_fail">当前位置不可拆分</string>
+    <string name="ck_tips_not_enough_spacing">特效与结尾间距不足，无法复制</string>
+    <string name="ck_tips_main_track_must_have_material">主轨至少保留一个素材</string>
+    <string name="ck_tips_too_many_audio">继续添加可能会影响导出哦</string>
+    <string name="ck_enter_text">输入文字</string>
+
+</resources>

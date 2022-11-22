@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/adjust_ly_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blackThree"
+    tools:ignore="MissingDefaultResource">
+
+    <SurfaceView
+        android:id="@+id/mPreview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toTopOf="@id/iv_play"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.ss.ugc.android.editor.preview.subvideo.VideoGestureLayout
+        android:id="@+id/rlPreview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipChildren="false"
+        app:layout_constraintBottom_toBottomOf="@id/mPreview"
+        app:layout_constraintEnd_toEndOf="@id/mPreview"
+        app:layout_constraintStart_toStartOf="@id/mPreview"
+        app:layout_constraintTop_toTopOf="@id/mPreview">
+
+        <!--  visibility="gone" 避免一开始就绘制后面重绘带来的闪屏  -->
+        <com.ss.ugc.android.editor.preview.adjust.view.CropAdjustRect
+            android:id="@+id/viewCropAdjustRect"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+    </com.ss.ugc.android.editor.preview.subvideo.VideoGestureLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_play"
+        android:layout_width="23dp"
+        android:layout_height="26dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/play_selector"
+        app:layout_constraintBottom_toTopOf="@id/rotateProgressBar"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toTopOf="@id/rotateProgressBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/tv_playtime"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.ss.ugc.android.editor.preview.adjust.view.RulerProgressBar
+        android:id="@+id/rotateProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="20dp"
+        app:highLightColor="@color/style_theme"
+        app:layout_constraintBottom_toTopOf="@id/pbbVideoFrameCrop"
+        app:normalLineColor="@color/white" />
+
+
+    <com.ss.ugc.android.editor.preview.adjust.view.PanelBottomBar
+        android:id="@+id/pbbVideoFrameCrop"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/blackThree"
+        android:text="@string/ck_crop"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5px"
+        android:background="@color/transparent_15p_white"
+        app:layout_constraintBottom_toTopOf="@id/pbbVideoFrameCrop" />
+
+    <TextView
+        android:id="@+id/tvReset"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:paddingStart="20dp"
+        android:paddingLeft="20dp"
+        android:paddingEnd="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/ck_reset"
+        android:textColor="@drawable/selector_white_text"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 定义矩形rectangle -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle"  >
+
+    <!-- 设置边框的大小和颜色 -->
+    <stroke android:width="1dip" android:color="@color/template_theme" />
+
+    <!-- 设置矩形内的颜色,此处为透明色 -->
+    <solid android:color="@android:color/transparent"/>
+
+    <!-- 定义圆角弧度 -->
+    <corners
+        android:bottomLeftRadius="0dp"
+        android:bottomRightRadius="0dp"
+        android:topLeftRadius="0dp"
+        android:topRightRadius="0dp"
+        />
+    <padding
+        android:left="1dp"
+        android:right="1dp"
+        android:top="1dp"
+        android:bottom="1dp"
+        />
+
+
+</shape>

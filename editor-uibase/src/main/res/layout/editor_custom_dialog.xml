@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_height="200dp"
+    tools:layout_width="300dp"
+    android:background="@drawable/bg_editor_custom_dialog">
+
+    <TextView
+        android:id="@+id/editor_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="center"
+        tools:text="这是标题"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:padding="12dp"
+        android:id="@+id/editor_dialog_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_editor_close"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible"
+        android:visibility="gone" />
+
+    <TextView
+        android:paddingHorizontal="24dp"
+        android:id="@+id/editor_dialog_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:maxWidth="230dp"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        tools:text="这是内容，字数可以很多很多，不够的的话还可以换行"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editor_dialog_title" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editor_dialog_edittext_layout"
+        app:layout_constraintTop_toBottomOf="@id/editor_dialog_title"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="22dp"
+        android:visibility="gone">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:gravity="start"
+            android:id="@+id/editor_dialog_edittext"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textCursorDrawable="@drawable/bg_black_cursor"
+            android:theme="@style/EditTextUnderscoreTheme" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editor_dialog_edittext_limit"
+            android:textSize="9sp"
+            android:textColor="@color/transparent_60p"
+            app:layout_constraintTop_toTopOf="@id/editor_dialog_edittext"
+            app:layout_constraintEnd_toEndOf="@id/editor_dialog_edittext"
+            android:visibility="gone"
+            android:layout_marginTop="33dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/editor_dialog_cancel"
+        android:layout_width="107dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="24dp"
+        tools:text="取消按钮"
+        android:background="@drawable/bg_editor_dialog_cancel"
+        android:gravity="center"
+        android:textColor="@color/transparent_45p"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/editor_dialog_confirm"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/editor_dialog_confirm"
+        android:layout_width="107dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/bg_fuchsia_button"
+        android:gravity="center"
+        android:textColor="@color/white"
+        tools:text="确定按钮"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@id/editor_dialog_cancel"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

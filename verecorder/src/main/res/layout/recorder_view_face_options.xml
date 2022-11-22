@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:orientation="vertical"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:padding="10dp"
+    android:background="@drawable/bg_item_unselect_selector"
+    android:layout_width="70dp"
+    android:layout_height="70dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/iv_face_options"
+        android:src="@drawable/ic_none"
+        android:layout_width="30dp"
+        android:tint="@color/tv_bottom_color"
+        android:layout_height="30dp" />
+
+    <TextView
+        android:id="@+id/tv_title_face_options"
+        android:textColor="@color/tv_bottom_color"
+        android:gravity="center"
+        android:maxLines="2"
+        android:text="磨皮"
+        android:layout_marginTop="2dp"
+        android:textSize="12sp"
+        android:ellipsize="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_desc_face_options"
+        android:textSize="11sp"
+        android:textColor="@color/colorGrey"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:maxLines="1"
+        android:visibility="gone"
+        android:ellipsize="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+    <View
+        android:id="@+id/v_face_options"
+        android:layout_width="3dp"
+        android:layout_height="3dp"/>
+</LinearLayout>
