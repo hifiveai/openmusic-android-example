@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ss.ugc.android.editor.base.resourceview.ResourceListView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/recycler_bubble"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never" />

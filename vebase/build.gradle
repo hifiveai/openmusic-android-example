@@ -1,0 +1,72 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            buildConfigField "Boolean", "ENABLE_TOB", "${ENABLE_TOB}" //是否tob
+        }
+    }
+    repositories {
+        flatDir {
+            dirs 'libs', '../library-res/libs'
+        }
+    }
+}
+
+dependencies {
+    println("--------Module app: ENABLE_TOB:$ENABLE_TOB")
+    if (ENABLE_TOB == "false") {
+        api("com.bytedance.ugc.framework.libs:vesdk:${versions.vesdk}") {
+            force(true)
+        }
+        api files('libs/patch.jar')
+
+    } else {
+        api project(':library_core')
+    }
+
+    //公用资源在base中依赖
+    api project(':library-res')
+
+    // 接入调试push so
+
+    //公用的support相关库在base中依赖
+    api rootProject.ext.support["appcompat"]
+    api rootProject.ext.support["recyclerview"]
+    api rootProject.ext.support["design"]
+    // 列表库
+    api(name: 'list-1.0.1-alpha.24', ext: 'aar')
+    // 媒体文件选择库
+    api rootProject.ext.dependencies["mediapicker"]
+    //权限
+    api rootProject.ext.dependencies["easy-permission"]
+    api rootProject.ext.dependencies["glide"]
+    api rootProject.ext.dependencies["fragment-rigger"]
+
+    api rootProject.ext.dependencies["smoothprogressbar"]
+//    api rootProject.ext.dependencies["butterknife"]
+//    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
+
+    api rootProject.ext.dependencies["gson"]
+    api rootProject.ext.dependencies["lottie"]
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+}
+repositories {
+    mavenCentral()
+}

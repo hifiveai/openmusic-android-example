@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/animGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="4dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_in"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:checked="true"
+            android:includeFontPadding="false"
+            android:padding="12dp"
+            android:text="@string/ck_text_anim_in"
+            android:textColor="@drawable/font_item_text_color" />
+
+        <RadioButton
+            android:id="@+id/rb_out"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:includeFontPadding="false"
+            android:padding="12dp"
+            android:text="@string/ck_text_anim_out"
+            android:textColor="@drawable/font_item_text_color" />
+
+        <RadioButton
+            android:id="@+id/rb_loop"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:includeFontPadding="false"
+            android:padding="12dp"
+            android:text="@string/ck_text_anim_loop"
+            android:textColor="@drawable/font_item_text_color" />
+    </RadioGroup>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.ss.ugc.android.editor.base.resourceview.ResourceListView
+            android:id="@+id/recycler_animation_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:visibility="visible" />
+
+        <com.ss.ugc.android.editor.base.resourceview.ResourceListView
+            android:id="@+id/recycler_animation_out"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:visibility="gone" />
+
+        <com.ss.ugc.android.editor.base.resourceview.ResourceListView
+            android:id="@+id/recycler_animation_loop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_inout_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:text="@string/ck_text_anim_duration"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+        <com.ss.ugc.android.editor.base.view.MutexSeekBar
+            android:id="@+id/bar_inout_duration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_loop_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:text="@string/ck_text_anim_duration"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:text="@string/ck_text_anim_quick"
+            android:textColor="#ffffff"
+            android:textSize="10sp" />
+
+        <com.ss.ugc.android.editor.base.view.CircleSeekBar
+            android:id="@+id/bar_loop_duration"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            app:drawDefaultPoint="false"
+            app:handleColor="@android:color/transparent"
+            app:handle_radius="6.5dp"
+            app:handle_stroke_width="1.5dp"
+            app:lineColor="@color/seek_bar_line"
+            app:lineHintColor="@color/transparent_20p_white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="26dp"
+            android:text="@string/ck_text_anim_slow"
+            android:textColor="#ffffff"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

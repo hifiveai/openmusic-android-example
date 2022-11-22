@@ -1,0 +1,10 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ss.ugc.android.editor.preview" >
+    <application>
+        <activity
+            android:name=".adjust.VideoFrameAdjustActivity"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+    </application>
+
+</manifest>

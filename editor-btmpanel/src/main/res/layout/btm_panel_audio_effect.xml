@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="435dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg_fragment"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/soundsTab"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_height="50dp">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            app:tabIndicatorColor="@color/tv_bottom_color"
+            app:tabIndicatorFullWidth="false"
+            app:tabMode="scrollable"
+            app:tabPaddingEnd="25dp"
+            app:tabPaddingStart="25dp"
+            app:tabSelectedTextColor="@color/colorWhite"
+            app:tabTextAppearance="@style/MyTabLayoutTextAppearance"
+            app:tabTextColor="@color/colorGrey" />
+
+    </LinearLayout>
+
+    <com.ss.ugc.android.editor.base.view.CustomViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/soundsError"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+<!--        <ImageView-->
+<!--            android:id="@+id/ivSoundsError"-->
+<!--            android:layout_width="20dp"-->
+<!--            android:layout_height="20dp"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            android:src="@drawable/ic_retry" />-->
+
+        <TextView
+            android:id="@+id/tvSoundsError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical"
+            android:text="@string/imuse_res_none_resource"
+            android:textColor="@color/transparent_80p_white"
+            android:textSize="14dp" />
+    </LinearLayout>
+</LinearLayout>

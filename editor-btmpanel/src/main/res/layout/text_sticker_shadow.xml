@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.ss.ugc.android.editor.bottom.weight.colorselect.ColorSelectContainer
+        android:id="@+id/color_select_container"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+
+    <LinearLayout
+        android:id="@+id/ll_shadow_transparency_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:text="@string/ck_text_sticker_transparency"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+        <com.ss.ugc.android.editor.base.view.CircleSeekBar
+            android:id="@+id/bar_sticker_shadow_transparency"
+            android:layout_width="225dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            app:lineColor="@color/seek_bar_line"
+            app:drawDefaultPoint="false"
+            app:handleColor="@android:color/transparent"
+            app:handle_radius="6.5dp"
+            app:handle_stroke_width="1.5dp"
+            app:lineHintColor="@color/transparent_20p_white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_shadow_smoothing_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:text="@string/ck_text_sticker_shadow_smoothing"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+        <com.ss.ugc.android.editor.base.view.CircleSeekBar
+            android:id="@+id/bar_sticker_shadow_smoothing"
+            android:layout_width="225dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            app:lineColor="@color/seek_bar_line"
+            app:drawDefaultPoint="false"
+            app:handleColor="@android:color/transparent"
+            app:handle_radius="6.5dp"
+            app:handle_stroke_width="1.5dp"
+            app:lineHintColor="@color/transparent_20p_white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_shadow_offset_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:text="@string/ck_text_sticker_shadow_offset"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+        <com.ss.ugc.android.editor.base.view.CircleSeekBar
+            android:id="@+id/bar_sticker_shadow_offset"
+            android:layout_width="225dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            app:lineColor="@color/seek_bar_line"
+            app:drawDefaultPoint="false"
+            app:handleColor="@android:color/transparent"
+            app:handle_radius="6.5dp"
+            app:handle_stroke_width="1.5dp"
+            app:lineHintColor="@color/transparent_20p_white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_shadow_angle_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:text="@string/ck_text_sticker_shadow_angle"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+        <com.ss.ugc.android.editor.base.view.CircleSeekBar
+            android:id="@+id/bar_sticker_shadow_angle"
+            android:layout_width="225dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            app:lineColor="@color/seek_bar_line"
+            app:drawDefaultPoint="false"
+            app:handleColor="@android:color/transparent"
+            app:handle_radius="6.5dp"
+            app:handle_stroke_width="1.5dp"
+            app:lineHintColor="@color/transparent_20p_white" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,78 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        //阿里路由框架配置 每个module都需要
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+        consumerProguardFiles 'proguard-rules.pro'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    // For Kotlin projects
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+//加载local property
+Properties properties = new Properties()
+def propFile = new File("$rootDir/local.properties")
+def enableTrackDebug = true
+if (propFile.exists()) {
+    InputStream inputStream = new FileInputStream(propFile);
+    properties.load(inputStream)
+    enableTrackDebug = properties.getProperty('ENABLE_EDITOR_SOURCE')
+}
+//
+println("----setting ENABLE_EDITOR_SOURCE----:$enableTrackDebug")
+
+
+dependencies {
+
+    api fileTree(dir: "libs", include: ["*.jar"])
+    api files('libs/editor-trackpanel-release.aar')
+    api project(':editor-btmpanel')
+    api project(':editor-preview')
+
+    api project(':editor-uibase')
+//    implementation(name:'editortrack-release', ext:'aar')
+    implementation 'androidx.exifinterface:exifinterface:1.3.3'
+    api rootProject.ext.support["appcompat"]
+    // 这里2.4.1 需要配合target 32,暂时不要升级最新版本
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0'
+
+    if (rootProject.hasProperty('ENABLE_TOB') && ENABLE_TOB == "true") {
+        print('enable tob ===== add inner res')
+        api project(':editor-tobres')
+    } else if (rootProject.hasProperty('ENABLE_IMUSE') && ENABLE_IMUSE == "true") {
+        print('enable tob ===== add imuse res')
+        api project(':editor-imuse-res')
+    } else {
+        print('disable tob ===== add online res')
+        api project(':editor-res')
+    }
+}

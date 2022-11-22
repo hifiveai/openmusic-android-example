@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_home"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+            <ImageView
+                android:id="@+id/template_info_back"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_app_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/template_info_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/template_info_title"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/template_info_reset_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="18dp"
+                android:clickable="true"
+                android:text="@string/template_info_reset"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ScrollView
+            android:id="@+id/template_info_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black_home">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/template_info_overall_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/set_cover_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="68dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/set_cover_iv"
+                        android:layout_width="250dp"
+                        android:layout_height="147dp"
+                        android:src="@drawable/ic_sample_cover_image"
+                        android:tint="@color/transparent_50p"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/set_cover_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/template_info_set_cover"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/set_cover_iv"
+                        app:layout_constraintEnd_toEndOf="@id/set_cover_iv"
+                        app:layout_constraintStart_toStartOf="@id/set_cover_iv"
+                        app:layout_constraintTop_toTopOf="@id/set_cover_iv" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/input_name_layout"
+                    android:layout_width="367dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="57dp"
+                    android:background="@drawable/bg_edittext_unselected"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/set_cover_layout">
+
+                    <EditText
+                        android:id="@+id/input_name_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:background="@color/transparent"
+                        android:hint="@string/template_info_input_name"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:paddingLeft="12dp"
+                        android:paddingTop="6dp"
+                        android:paddingRight="12dp"
+                        android:paddingBottom="6dp"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/transparent_30p_white"
+                        android:textCursorDrawable="@drawable/bg_cursor"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/input_name_char_limit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="9dp"
+                        android:text="@string/template_name_max_count"
+                        android:textAlignment="center"
+                        android:textColor="@color/transparent_30p_white"
+                        android:textSize="14sp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@id/input_name_edit"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/input_name_edit" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/input_desc_layout"
+                    android:layout_width="367dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_edittext_unselected"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/input_name_layout">
+
+                    <EditText
+                        android:id="@+id/input_desc_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="96dp"
+                        android:background="@color/transparent"
+                        android:gravity="start"
+                        android:hint="@string/template_info_input_desc"
+                        android:inputType="textMultiLine"
+                        android:paddingLeft="12dp"
+                        android:paddingTop="6dp"
+                        android:paddingRight="12dp"
+                        android:paddingBottom="6dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/transparent_30p_white"
+                        android:textCursorDrawable="@drawable/bg_cursor"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/input_desc_char_limit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="9dp"
+                        android:layout_marginBottom="6dp"
+                        android:text="@string/template_desc_max_count"
+                        android:textColor="@color/transparent_30p_white"
+                        android:textSize="14sp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <EditText
+                    android:id="@+id/input_keyword_edit"
+                    android:layout_width="367dp"
+                    android:layout_height="108dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/bg_edittext_unselected"
+                    android:gravity="start"
+                    android:hint="@string/template_info_key_word_hint"
+                    android:inputType="textMultiLine"
+                    android:paddingLeft="12dp"
+                    android:paddingTop="6dp"
+                    android:paddingRight="12dp"
+                    android:paddingBottom="6dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/transparent_30p_white"
+                    android:textCursorDrawable="@drawable/bg_cursor"
+                    android:textSize="14sp"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/input_desc_layout"
+                    app:layout_constraintTop_toBottomOf="@id/input_desc_layout" />
+
+                <HorizontalScrollView
+                    android:id="@+id/scroll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="60dp"
+                    app:layout_constraintStart_toStartOf="@id/input_desc_layout"
+                    app:layout_constraintTop_toBottomOf="@id/input_desc_layout">
+
+                    <TextView
+                        android:id="@+id/input_keyword_notice_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginEnd="12dp"
+                        android:background="@drawable/bg_template_key_word"
+                        android:maxLines="1"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:text="@string/template_info_key_word"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:visibility="visible"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="parent" />
+
+                </HorizontalScrollView>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/more_settings_button_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="33dp"
+                    app:layout_constraintStart_toStartOf="@id/scroll"
+                    app:layout_constraintTop_toBottomOf="@id/scroll">
+
+                    <TextView
+                        android:id="@+id/more_settings_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="247dp"
+                        android:text="@string/template_info_more_config"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        app:layout_constraintEnd_toStartOf="@id/more_settings_iv"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/more_settings_iv"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/ic_template_reverse_back"
+                        app:layout_constraintBottom_toBottomOf="@id/more_settings_tv"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/more_settings_tv" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/template_export_button_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="65dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/more_settings_button_layout">
+
+                    <Button
+                        android:id="@+id/template_export_button"
+                        android:layout_width="295dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/bg_template_button"
+                        android:text="@string/template_info_export_button"
+                        android:textColor="@color/transparent_30p_white"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/template_user_contract_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21dp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/template_export_button_layout">
+
+                    <ImageView
+                        android:id="@+id/template_user_contract_button"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:src="@drawable/ic_empty_select"
+                        app:layout_constraintBottom_toBottomOf="@id/template_user_contract_tv"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/template_user_contract_tv" />
+
+                    <TextView
+                        android:id="@+id/template_user_contract_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        tools:text="这个是填充文字"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@id/template_user_contract_button"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.legacy.widget.Space
+                    android:id="@+id/sp_template_space"
+                    android:layout_width="match_parent"
+                    android:layout_height="480dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/template_export_button_layout" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/template_more_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</FrameLayout>

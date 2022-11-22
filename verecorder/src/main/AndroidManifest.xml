@@ -1,0 +1,15 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.vesdk.verecorder">
+
+    <application>
+        <!--在自己组件中注册Activity-->
+
+        <!--    拍摄    -->
+        <activity
+            android:name=".record.demo.PreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+    </application>
+
+</manifest>

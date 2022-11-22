@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+
+        <ImageView
+            android:id="@+id/btn_align_left"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_text_align_left_selector" />
+
+        <ImageView
+            android:id="@+id/btn_align_center"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_text_align_center_selector" />
+
+        <ImageView
+            android:id="@+id/btn_align_right"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_text_align_right_selector" />
+
+        <ImageView
+            android:id="@+id/btn_align_top"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_text_align_top_selector" />
+
+        <ImageView
+            android:id="@+id/btn_align_v_center"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_text_align_v_center_selector" />
+
+        <ImageView
+            android:id="@+id/btn_align_bottom"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_text_align_bottom_selector" />
+
+    </LinearLayout>
+
+    <!-- 字间距 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:text="@string/ck_text_sticker_char_spacing"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+        <com.ss.ugc.android.editor.base.view.CircleSeekBar
+            android:id="@+id/bar_text_char_spacing"
+            android:layout_width="225dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            app:lineColor="@color/seek_bar_line"
+            app:drawDefaultPoint="false"
+            app:handleColor="@android:color/transparent"
+            app:handle_radius="6.5dp"
+            app:handle_stroke_width="1.5dp"
+            app:lineHintColor="@color/transparent_20p_white" />
+
+    </LinearLayout>
+
+    <!-- 行间距 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:text="@string/ck_text_sticker_line_gap"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+        <com.ss.ugc.android.editor.base.view.CircleSeekBar
+            android:id="@+id/bar_text_line_gap"
+            android:layout_width="225dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            app:lineColor="@color/seek_bar_line"
+            app:drawDefaultPoint="false"
+            app:handleColor="@android:color/transparent"
+            app:handle_radius="6.5dp"
+            app:handle_stroke_width="1.5dp"
+            app:lineHintColor="@color/transparent_20p_white" />
+
+    </LinearLayout>
+
+</LinearLayout>

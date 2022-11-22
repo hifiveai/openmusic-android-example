@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ExportThumbnailView">
+        <attr name="outlineWidth" format="integer"/>
+        <attr name="outlineColor" format="color"/>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/welcome"
+        android:visibility="gone"
+        app:layout_constraintDimensionRatio="w,16:9"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/welcome2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/bg_record"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="59dp"
+        android:background="@drawable/home_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/bg_edit" />
+
+    <ImageView
+        android:id="@+id/bg_edit"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="59dp"
+        android:background="@drawable/home_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toRightOf="@id/bg_record"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/bg_hepai"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/home_bg"
+        app:layout_constraintBottom_toBottomOf="@+id/bg_drafts"
+        app:layout_constraintBottom_toTopOf="@id/bg_record"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="@id/bg_record" />
+
+    <ImageView
+        android:id="@+id/bg_drafts"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/home_bg"
+        app:layout_constraintBottom_toBottomOf="@id/bg_hepai"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintRight_toRightOf="@id/bg_record" />
+
+    <TextView
+        android:id="@+id/tx_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_welcome_record"
+        android:drawablePadding="6dp"
+        android:gravity="center"
+        android:text="@string/ck_home_record"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="@id/bg_record"
+        app:layout_constraintLeft_toLeftOf="@id/bg_record"
+        app:layout_constraintRight_toRightOf="@id/bg_record"
+        app:layout_constraintTop_toTopOf="@id/bg_record" />
+
+    <TextView
+        android:id="@+id/tx_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_welcome_edit"
+        android:drawablePadding="6dp"
+        android:gravity="center"
+        android:text="@string/ck_home_edit"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="@id/bg_edit"
+        app:layout_constraintLeft_toLeftOf="@id/bg_edit"
+        app:layout_constraintRight_toRightOf="@id/bg_edit"
+        app:layout_constraintTop_toTopOf="@id/bg_edit" />
+
+    <TextView
+        android:id="@+id/tv_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="v1.0" />
+
+    <fr.castorflex.android.smoothprogressbar.SmoothProgressBar
+        android:id="@+id/smooth_progress"
+        android:layout_width="200dp"
+        android:layout_height="1dp"
+        android:layout_alignBottom="@id/tv_version"
+        android:layout_centerHorizontal="true"
+        android:indeterminate="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:spb_color="#FF0000"
+        app:spb_mirror_mode="false"
+        app:spb_progressiveStart_activated="true"
+        app:spb_progressiveStart_speed="1.5"
+        app:spb_progressiveStop_speed="3.4"
+        app:spb_reversed="false"
+        app:spb_sections_count="4"
+        app:spb_speed="2.0"
+        app:spb_stroke_separator_length="4dp"
+        app:spb_stroke_width="4dp" />
+
+    <TextView
+        android:id="@+id/tv_hepai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/welcome_hepai"
+        android:drawablePadding="6dp"
+        android:gravity="center"
+        android:text="@string/ck_home_hepai"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="@id/bg_hepai"
+        app:layout_constraintLeft_toLeftOf="@id/bg_hepai"
+        app:layout_constraintRight_toRightOf="@id/bg_hepai"
+        app:layout_constraintTop_toTopOf="@id/bg_hepai" />
+
+    <TextView
+        android:id="@+id/tx_drafts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/welcome_drafts"
+        android:drawablePadding="6dp"
+        android:gravity="center"
+        android:text="@string/ck_home_drafts"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="@id/bg_drafts"
+        app:layout_constraintLeft_toLeftOf="@id/bg_drafts"
+        app:layout_constraintRight_toRightOf="@id/bg_drafts"
+        app:layout_constraintTop_toTopOf="@id/bg_drafts" />
+
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

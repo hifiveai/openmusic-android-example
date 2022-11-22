@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="write">#FFFFFF</color>
+    <color name="transparent_60p">#99000000</color><!--60%透明度-->
+    <color name="transparent_70p">#B2000000</color><!--60%透明度-->
+    <color name="transparent_80p">#CC000000</color><!--80%透明度-->
+    <color name="transparent_30p_white">#4DFFFFFF</color><!--30%透明度-->
+    <color name="filter_select_bg">#55000000</color>
+    <color name="style_recode_audio">#FE6646</color>
+    <color name="common_text_color">#7FFFFFFF</color><!--30%透明度-->
+    <color name="delete_enable">#C239AF</color><!--30%透明度-->
+    <color name="delete_disable">#FFFFFF</color><!--30%透明度-->
+</resources>

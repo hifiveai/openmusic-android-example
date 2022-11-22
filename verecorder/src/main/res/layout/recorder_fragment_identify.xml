@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/ck_colorBg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_top_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ic_sticker_reset"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:scaleType="center"
+                android:src="@drawable/ic_sticker_reset" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@color/colorWhite" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/fragment_top"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tl_identify"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:tabBackground="@drawable/bg_item_unselect_selector"
+                app:tabIndicatorColor="@color/tv_bottom_color"
+                app:tabMode="scrollable"
+                app:tabSelectedTextColor="@color/colorWhite"
+                app:tabTextAppearance="@style/CKRecordTextAppearance"
+                app:tabTextColor="@color/colorGrey" />
+
+            <TextView
+                android:id="@+id/tv_title_identify"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_close_makeup_option"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical|start"
+                android:alpha="0"
+                android:padding="5dp"
+                android:src="@drawable/ic_arrow_left"
+                android:visibility="gone" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_identify"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/black_all">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vp_identify"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_all"
+        android:clickable="true">
+
+        <com.vesdk.verecorder.record.demo.view.CircularProgressView
+            android:id="@+id/bottom_start"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bt_pic_selector"
+            app:backColor="@color/colorWhite"
+            app:backWidth="3dp"
+            app:progColor="#E36E55"
+            app:progWidth="3dp"
+            app:progress1="0" />
+
+        <TextView
+            android:id="@+id/tv_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:drawableLeft="@drawable/ic_reset"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:text="@string/ck_reset"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/iv_ok"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="3dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_ok"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="@color/black_all" />
+</LinearLayout>

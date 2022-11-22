@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <color name="transparent">@android:color/transparent</color>
+
+    <!-- Android standard ICS color -->
+    <!-- Android standard ICS color -->
+
+    <color name="black_home">#181718</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="white_50">#7FFFFFFF</color>
+    <color name="colorGrey">#9C9C9C</color>
+    <color name="advanced_black">#4D4C4D</color>
+    <color name="tab_red">#E36E55</color>
+
+
+    <color name="tv_bottom_color">#E36E55</color>
+    <color name="bg_fragment">#181718</color>
+    <color name="bg_no_filter">#303336</color>
+    <color name="bg_filter_selected">#55000000</color>
+
+    <color name="colorEditorTimeTrackBackground">#303030</color>
+    <color name="templateKeywordTextColor">#FBCD60</color>
+
+    <color name="transparent_90p">#E6000000</color><!--90%透明度-->
+    <color name="transparent_85p">#D9000000</color><!--85%透明度-->
+    <color name="transparent_80p">#CC000000</color><!--80%透明度-->
+    <color name="transparent_75p">#BF000000</color><!--75%透明度-->
+    <color name="transparent_70p">#B4000000</color><!--70%透明度-->
+    <color name="transparent_65p">#A5000000</color><!--65%透明度-->
+    <color name="transparent_60p">#99000000</color><!--60%透明度-->
+    <color name="transparent_55p">#8C000000</color><!--50%透明度-->
+    <color name="transparent_50p">#7F000000</color><!--50%透明度-->
+    <color name="transparent_45p">#72000000</color><!--45%透明度-->
+    <color name="transparent_40p">#66000000</color><!--40%透明度-->
+    <color name="transparent_30p">#4D000000</color><!--30%透明度-->
+    <color name="transparent_20p">#33000000</color><!--20%透明度-->
+    <color name="transparent_15p">#26000000</color><!--15%透明度-->
+    <color name="transparent_10p">#1A000000</color><!--10%透明度-->
+    <color name="transparent_5p">#0C000000</color><!--10%透明度-->
+    <color name="black">#FF000000</color>
+
+    <color name="off_selected_next_step">#2f2f2f</color>
+    <color name="style_btn_enable">@color/style_theme</color>
+
+    <color name="style_slider_line" >@color/style_theme</color>
+
+    <color name="light_grey">#C4C4C4</color>
+
+</resources>

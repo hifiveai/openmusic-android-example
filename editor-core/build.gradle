@@ -1,0 +1,59 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'proguard-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+//加载local property
+Properties properties = new Properties()
+def propFile = new File("$rootDir/local.properties")
+def nle_source = false
+if (propFile.exists()) {
+    InputStream inputStream = new FileInputStream(propFile);
+    properties.load(inputStream)
+    def enable_nle_resource =  properties.getProperty('code.NLEPlatform')
+    if(enable_nle_resource != null ) {
+        nle_source =  enable_nle_resource.toBoolean()
+    } else {
+        nle_source =  false
+    }
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation rootProject.ext.support["recyclerview"]
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    api rootProject.ext.support["appcompat"]
+
+
+    api project(':library_core')
+    api rootProject.ext.dependencies["gson"]
+    api "org.jetbrains.kotlin:kotlin-stdlib:1.4.10"
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.3"
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.3"
+}

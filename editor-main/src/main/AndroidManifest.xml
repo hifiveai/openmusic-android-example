@@ -1,0 +1,50 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+    package="com.ss.ugc.android.editor.main">
+    <!--在自己组件中注册Activity-->
+
+    <application>
+
+        <activity
+            android:name="com.ss.ugc.android.editor.main.EditorActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode|screenLayout|smallestScreenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustNothing">
+            <intent-filter>
+                <action android:name="record_sdk_action_ve" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+
+        <!--    图片选择页禁用横屏    -->
+        <activity
+            android:name="com.ss.ugc.android.editor.picker.mediapicker.PickerActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".cover.CutSameEditActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name="com.ss.ugc.android.editor.preview.activity.FullScreenActivity"/>
+
+        <service
+            android:name="com.ss.ugc.android.editor.bottom.panel.audio.service.MusicService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <provider
+            android:name="com.ss.ugc.android.editor.main.file.DavinciProvider"
+            android:authorities="${applicationId}.FileProvider"
+            android:exported="false"
+                tools:replace="android:authorities"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+
+    </application>
+</manifest>

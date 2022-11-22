@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:background="@color/black_home"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/tv_resolution_540"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="540P"
+        android:gravity="center"
+        android:textColor="@android:color/white" />
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/tv_resolution_720"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="720P"
+        android:gravity="center"
+        android:textColor="@android:color/white" />
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/tv_resolution_1080"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="1080P"
+        android:gravity="center"
+        android:textColor="@android:color/white" />
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/tv_resolution_4k"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="4K"
+        android:gravity="center"
+        android:textColor="@android:color/white" />
+
+
+</LinearLayout>

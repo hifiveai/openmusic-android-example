@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SliderView">
+        <attr name="lv_lineColor" format="color" />
+        <attr name="lv_lineHintColor" format="color" />
+        <attr name="lv_handleStrokeColor" format="color" />
+        <attr name="lv_drawDefaultPoint" format="boolean" />
+        <attr name="lv_handleColor" format="color" />
+        <attr name="lv_handle_stroke_width" format="dimension" />
+        <attr name="lv_handle_radius" format="dimension" />
+        <attr name="lv_lineWidth" format="dimension" />
+        <attr name="lv_progressLineWidth" format="dimension"/>
+        <attr name="lv_fillWidth" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="AlphaButton">
+        <attr name="normalAlpha" format="float" />
+        <attr name="pressedAlpha" format="float" />
+        <attr name="disableAlpha" format="float" />
+    </declare-styleable>
+    <declare-styleable name="RulerProgressBar">
+        <attr name="highLightColor" format="color" />
+        <attr name="normalLineColor" format="color" />
+        <attr name="groupLineColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="PanelBottomBar">
+        <attr name="android:text" format="string" />
+        <attr name="android:background" format="color" />
+    </declare-styleable>
+</resources>

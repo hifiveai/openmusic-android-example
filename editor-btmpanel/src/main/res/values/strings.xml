@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tone_change_speed">声调变速</string>
+    <string name="anim_all">组合动画</string>
+    <string name="anim_out">出场动画</string>
+    <string name="anim_in">入场动画</string>
+    <string name="anim_duration">动画时长</string>
+    <string name="add_image_sticker">添加贴纸</string>
+    <string name="image_sticker">贴纸</string>
+    <string name="add_text_sticker">添加文字</string>
+    <string name="text_template">文字模板</string>
+
+    <string name="back_to_home">返回首页</string>
+    <string name="save_content_hint">创作尚未保存，是否存入 \n 草稿箱？</string>
+    <string name="adjust_reset_content">确认重置所有参数吗？</string>
+    <string name="adjust_reset_title">重置参数</string>
+    <string name="cancel_text">取消</string>
+    <string name="confirm">确定</string>
+    <string name="delete">删除</string>
+    <string name="delete_drafts">删除草稿</string>
+    <string name="delete_drafts_body">删除后，这1个模板将无法复原。</string>
+    <string name="delete_single_draft_body">删除后，这个模板将无法复原。</string>
+    <string name="delete_draft_res_not_found">草稿素材不存在，视频已被删除。</string>
+
+    <string name="template_setting">模版设置</string>
+    <string name="skip_template_setting">跳过</string>
+
+    <string name="curve_speed">曲线变速</string>
+    <string name="normal_speed">常规变速</string>
+    <string name="add_audio">添加音频</string>
+    <string name="add_epilogue">添加片尾</string>
+    <string name="beautify">美颜</string>
+    <string name="enter_text">输入文字</string>
+    <string name="epilogue">片尾</string>
+    <string name="music_collection">音乐合集</string>
+    <string name="none">无</string>
+    <string name="original_picture">原图</string>
+    <string name="record_insert">录音%s</string>
+    <string name="video">视频</string>
+    <string name="volume">音量</string>
+
+    <string name="curve_speed_src_duration">时长%.1f</string>
+    <string name="curve_speed_dst_duration">%.1f</string>
+    <string name="remove">删除</string>
+    <string name="add">添加</string>
+    <string name="reset">重置</string>
+    <string name="curve_speed_value">%1$.1f X</string>
+
+    <string name="video_mask">蒙版</string>
+    <string name="video_mask_feather">羽化</string>
+    <string name="video_mask_invert">翻转</string>
+    <string name="blend_model_opacity">不透明度</string>
+
+    <string name="audio_fade_in">淡入时长</string>
+    <string name="audio_fade_out">淡出时长</string>
+
+    <string name="current_no_more">暂时没有更多了</string>
+    <string name="drag_preview_music">拖动试听音乐</string>
+    <string name="zero">00:00</string>
+    <string name="network_music_list_empty">音乐正在补充中…</string>
+    <string name="local_music_list_empty">本地音乐数据为空…</string>
+    <string name="whether_exit_edit">确定退出编辑吗</string>
+    <string name="content_will_disappear">退出后编辑的内容将会消失</string>
+    <string name="exit">退出</string>
+    <string name="continue_edit">继续编辑</string>
+
+    <string name="text_keyboard">键盘</string>
+    <string name="text_style">样式</string>
+    <string name="text_flower">花字</string>
+    <string name="text_bubble">气泡</string>
+    <string name="text_anima">动画</string>
+
+    <string name="text_template_select">选择模板</string>
+    <string name="text_template_hot">热门</string>
+    <string name="text_template_base">基础</string>
+    <string name="text_template_atmosphere">氛围</string>
+    <string name="text_template_click">点击编辑</string>
+
+    <string name="text_anim_in">入场动画</string>
+    <string name="text_anim_out">出场动画</string>
+    <string name="text_anim_loop">循环动画</string>
+    <string name="text_anim_duration">动画时长</string>
+    <string name="text_anim_quick">快</string>
+    <string name="text_anim_slow">慢</string>
+
+    <string name="text_sticker_transparency">透明度</string>
+    <string name="text_sticker_outline_width">描边粗细</string>
+    <string name="text_sticker_shadow_smoothing">模糊度</string>
+    <string name="text_sticker_shadow_offset">距离</string>
+    <string name="text_sticker_shadow_angle">角度</string>
+    <string name="text_sticker_char_spacing">字间距</string>
+    <string name="text_sticker_line_gap">行间距</string>
+
+    <string name="hold_to_record">按住录音</string>
+    <string name="recoding">正在录音</string>
+
+    <string name="save_cover">保存</string>
+    <string name="reset_cover">重置</string>
+    <string name="apply_text_sticker_cover">添加文字</string>
+    <string name="edit_image_cover">点击编辑</string>
+
+    <string name="fail_to_split">定格失败:拆分视频失败</string>
+    <string name="file_is_empty">定格失败:素材为空</string>
+    <string name="not_select_slot">定格失败:光标请移动到选中的素材内</string>
+    <string name="reverse_play_success">倒放成功</string>
+    <string name="reverse_play_cancel">取消倒放</string>
+    <string name="reverse_play_fail">倒放失败</string>
+    <string name="please_select_slot">请先选中要处理的轨道</string>
+    <string name="ck_opacity">强度</string>
+    <string name="ck_tips_not_enough_spacing">特效与结尾间距不足，无法复制</string>
+    <string name="ck_tips_not_enough_spacing_add_effect">该位置无法添加特效</string>
+</resources>

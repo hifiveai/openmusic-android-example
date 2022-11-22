@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_above="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_pic_back"
+            android:drawableTop="@drawable/ic_pic_back"
+            android:text="@string/ck_back"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:textColor="#fff"
+            android:layout_marginLeft="27dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_pic_save"
+            android:drawableTop="@drawable/ic_pic_save"
+            android:text="@string/ck_save"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:textColor="#fff"
+            android:layout_marginRight="27dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <com.vesdk.verecorder.record.demo.view.CircularProgressView
+            android:id="@+id/progress"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            app:backColor="@color/colorWhite"
+            app:backWidth="5dp"
+            android:background="@drawable/bt_pic_selector"
+            android:layout_centerInParent="true"
+            app:progColor="#E36E55"
+            app:progWidth="5dp"
+            app:progress1="0"/>
+
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tv_editor"
+            android:layout_below="@+id/progress"
+            android:layout_marginTop="2dp"
+            android:text="@string/ck_import_editing"
+            android:textSize="12sp"
+            android:textColor="@color/colorWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:id="@+id/ll_left"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/ll_sticker"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:src="@drawable/ic_bt_sticker" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ck_props"
+                    android:textColor="@color/featureboard_bg" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_filter"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:src="@drawable/ic_bt_filter" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ck_filter"
+                    android:textColor="@color/featureboard_bg" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+
+            android:layout_centerInParent="true"
+
+            android:layout_toRightOf="@+id/progress"
+            android:layout_marginLeft="50dp"
+            android:id="@+id/ll_beauty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+           >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_bt_beauty" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ck_beautify"
+                android:textColor="@color/featureboard_bg" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <include layout="@layout/recorder_linearlayout_custom"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

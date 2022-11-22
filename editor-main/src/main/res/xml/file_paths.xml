@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <files-path
+        name="com.ss.android.advance.editor.FileProvider"
+        path="." />
+    <external-path
+        name="com.ss.android.advance.editor.xFileProvider"
+        path="." />
+</paths>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
+
+    <TextView
+        android:id="@+id/selectCountTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="18dp"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/confirmTV"
+        android:layout_width="74dp"
+        android:layout_height="32dp"
+        android:background="@drawable/bg_finish_select_disable_btn"
+        android:text="@string/ck_start"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/addTV"
+        android:layout_width="74dp"
+        android:layout_height="32dp"
+        android:visibility="gone"
+        android:background="@drawable/bg_finish_select_enable_btn"
+        android:text="@string/ck_add"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

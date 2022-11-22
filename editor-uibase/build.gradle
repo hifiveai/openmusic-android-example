@@ -1,0 +1,58 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+
+//apply plugin: 'com.jakewharton.butterknife' // 2. butterknife
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        consumerProguardFiles 'proguard-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    api fileTree(dir: "libs", include: ["*.jar"])
+
+    api project(':editor-core')
+
+    //noinspection GradleCompatible
+//    api 'com.android.support:appcompat:27.1.1'
+//    api 'com.android.support:design:27.1.1'
+
+//    公用资源在base中依赖
+
+    //公用的support相关库在base中依赖
+    api rootProject.ext.support["design"]
+    api rootProject.ext.support["constraint-layout"]
+
+    //noinspection GradleCompatible
+    api rootProject.ext.support["recyclerview"]
+    // 列表库
+    api(name: 'list-1.0.1-alpha.24', ext: 'aar')
+
+    //权限
+    api rootProject.ext.dependencies["easy-permission"]
+    api rootProject.ext.dependencies["smoothprogressbar"]
+    api rootProject.ext.dependencies["lottie"]
+    api rootProject.ext.dependencies["photoView"]
+
+    api 'androidx.exifinterface:exifinterface:1.0.0'
+    api 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+
+}

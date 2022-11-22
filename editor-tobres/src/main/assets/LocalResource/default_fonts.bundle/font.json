@@ -1,0 +1,26 @@
+{
+  "resource": {
+    "list": [
+      {
+        "path": "zh-hans.ttf"
+      },
+      {
+        "path": "zh-hant.ttf"
+      },
+      {
+        "path": "en.ttf"
+      },
+      {
+        "path": "ja.ttf"
+      },
+      {
+        "path": "ko.ttf"
+      },
+      {
+        "path": "th.ttf"
+      }
+    ]
+  },
+  "type": "default_fonts",
+  "version": "1.0"
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    圆形进度条-->
+    <declare-styleable name="HiFiveProgress">
+        <attr name="hiFive_backWidth" format="dimension" />    <!--背景圆环宽度-->
+        <attr name="hiFive_progWidth" format="dimension" />    <!--进度圆环宽度-->
+        <attr name="hiFive_backColor" format="color" />        <!--背景圆环颜色-->
+        <attr name="hiFive_progColor" format="color" />        <!--进度圆环颜色-->
+        <attr name="hiFive_progStartColor" format="color" />   <!--进度圆环开始颜色-->
+        <attr name="hiFive_progFirstColor" format="color" />   <!--进度圆环结束颜色-->
+        <attr name="hiFive_progress" format="integer" />       <!--圆环进度-->
+    </declare-styleable>
+</resources>

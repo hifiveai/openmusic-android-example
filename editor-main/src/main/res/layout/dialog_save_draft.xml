@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="158dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/bg_draft_save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/ck_back_to_home"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/bg"
+        app:layout_constraintRight_toRightOf="@id/bg"
+        app:layout_constraintTop_toTopOf="@id/bg" />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="154dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="@string/ck_save_content_hint"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="@id/bg"
+        app:layout_constraintRight_toRightOf="@id/bg"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <TextView
+        android:id="@+id/cancel"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_draft_save_cancel"
+        android:gravity="center"
+        android:text="@string/ck_cancel"
+        android:textColor="@color/tab_red"
+        android:textSize="14sp"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintLeft_toLeftOf="@id/bg"
+        app:layout_constraintRight_toLeftOf="@id/confirm"
+        app:layout_constraintTop_toBottomOf="@id/content" />
+
+    <TextView
+        android:id="@+id/confirm"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_draft_save_confirm"
+        android:gravity="center"
+        android:text="@string/ck_confirm"
+        android:textColor="@color/colorWhite"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@id/cancel"
+        app:layout_constraintRight_toRightOf="@id/bg"
+        app:layout_constraintTop_toBottomOf="@id/content" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

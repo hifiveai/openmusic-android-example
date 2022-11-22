@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <SurfaceView
+        android:id="@+id/preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/iv_capture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000"
+        android:scaleType="fitCenter"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <com.vesdk.verecorder.record.preview.function.FeatureView
+        android:id="@+id/feature"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/preview"
+        app:layout_constraintLeft_toLeftOf="@id/preview"
+        app:layout_constraintRight_toRightOf="@id/preview"
+        app:layout_constraintTop_toTopOf="@id/preview" />
+
+    <com.vesdk.verecorder.record.demo.view.RecordTabView
+        android:id="@+id/record_tab"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:paddingLeft="108dp"
+        android:paddingRight="108dp"
+        app:layout_constraintBottom_toTopOf="@+id/tab_index_line"
+        app:layout_constraintLeft_toLeftOf="@id/fragment_container"
+        app:layout_constraintRight_toRightOf="@id/fragment_container" />
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ImageView
+        android:id="@+id/tab_index_line"
+        android:layout_width="30dp"
+        android:layout_height="2dp"
+        android:layout_marginBottom="170dp"
+        android:background="@drawable/tab_index_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/fragment_container"
+        app:layout_constraintRight_toRightOf="@id/fragment_container" />
+
+    <TextView
+        android:id="@+id/zoom"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="200dp"
+        android:background="@drawable/gray_circle"
+        android:gravity="center"
+        android:text="1X"
+        android:textColor="@color/colorWhite"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_duet_change"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/zoom"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_record_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_function" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_function"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="18dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_close"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/delay"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/delay"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_no_delay"
+            app:layout_constraintBottom_toBottomOf="@id/close"
+            app:layout_constraintLeft_toRightOf="@id/close"
+            app:layout_constraintRight_toLeftOf="@id/flash"
+            app:layout_constraintTop_toTopOf="@+id/close" />
+
+        <ImageView
+            android:id="@+id/flash"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:scaleType="center"
+            android:src="@drawable/sel_flash"
+            app:layout_constraintBottom_toBottomOf="@id/close"
+            app:layout_constraintLeft_toRightOf="@id/delay"
+            app:layout_constraintRight_toLeftOf="@id/ratio"
+            app:layout_constraintTop_toTopOf="@+id/close" />
+
+        <TextView
+            android:id="@+id/ratio"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:gravity="center"
+            android:text="9:16"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/close"
+            app:layout_constraintLeft_toRightOf="@id/flash"
+            app:layout_constraintRight_toLeftOf="@id/resolution"
+            app:layout_constraintTop_toTopOf="@+id/close"
+            tools:text="9:16" />
+
+        <TextView
+            android:id="@+id/resolution"
+            android:layout_width="46dp"
+            android:layout_height="36dp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="720P"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/close"
+            app:layout_constraintLeft_toRightOf="@id/ratio"
+            app:layout_constraintRight_toLeftOf="@id/switch_camera"
+            app:layout_constraintTop_toTopOf="@+id/close"
+            tools:text="720P" />
+
+        <ImageView
+            android:id="@+id/switch_camera"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:scaleType="center"
+            android:src="@drawable/ck_ic_switch_camera"
+            app:layout_constraintBottom_toBottomOf="@id/close"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintLeft_toRightOf="@id/resolution"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/close" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <SeekBar
+        android:id="@+id/ec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/top_function" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@color/black_home"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_anim_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginLeft="15dp"
+        android:text="@string/ck_text_anim_duration"
+        android:textColor="@color/colorWhite"
+        android:textSize="12sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/pb_duration"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/pb_duration"
+        app:layout_constraintTop_toTopOf="@id/pb_duration"
+        tools:visibility="visible" />
+
+    <com.ss.ugc.android.editor.base.view.ProgressBar
+        android:id="@+id/pb_duration"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="5dp"
+        android:paddingStart="43dp"
+        android:paddingTop="25dp"
+        android:paddingEnd="43dp"
+        android:visibility="invisible"
+        app:activeLineColor="@color/tv_bottom_color"
+        app:circleRadius="5dp"
+        app:inactiveLineColor="#535353"
+        app:layout_constraintLeft_toRightOf="@id/tv_anim_duration"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/bg"
+        app:textHeight="20dp"
+        app:textSize="10sp"
+        tools:visibility="visible" />
+
+    <com.ss.ugc.android.editor.base.resourceview.ResourceListView
+        android:id="@+id/rcv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipChildren="true"
+        android:clipToPadding="true"
+        android:paddingStart="9dp"
+        android:paddingEnd="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pb_duration" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
